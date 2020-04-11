@@ -13,6 +13,9 @@ jobs:
         id: hello
         with:
           who-to-greet: 'Mona the Octocat'
+          number: 10
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get the output sum
+        run: echo "The sum is ${{ steps.hello.outputs.sum }}"
